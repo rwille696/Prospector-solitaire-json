@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ProspectorSolitaire.sln"
+    "dotnet.defaultSolution": "Prospector-solitaire-json.sln"
 }
