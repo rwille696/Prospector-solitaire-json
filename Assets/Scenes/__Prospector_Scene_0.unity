@@ -883,8 +883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc8e5d708577a7a49afe30038992daff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deckJSON: {fileID: 4900000, guid: caff80825454742cba113312425f8137, type: 3}
-  layoutJSON: {fileID: 4900000, guid: 0579412819a174464adf828afde18c5f, type: 3}
+  deckJSON: {fileID: 4900000, guid: c5b30f8f604ca654f8f6e0af33524be5, type: 3}
+  layoutJSON: {fileID: 4900000, guid: 148ae5f5a4ac7e44b85af94cfe29bde8, type: 3}
   xOffset: 3
   yOffset: -2.5
   layoutCenter: {x: 0, y: 0, z: 0}
