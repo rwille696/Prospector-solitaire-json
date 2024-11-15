@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public enum eScoreEvent {
     draw,
@@ -19,7 +20,7 @@ public class ScoreManager : MonoBehaviour {
     [Header("Set Dynamically")]
     public int              chain = 0;
     public int              scoreRun = 0;
-    public int              score = 0;
+    public int              score = 35;
 
     private void Awake() {
         if (S == null) {
@@ -49,13 +50,14 @@ public class ScoreManager : MonoBehaviour {
             case eScoreEvent.gameWin:
             case eScoreEvent.gameLoss:
                 chain = 0;
-                score += scoreRun;
+                //score += scoreRun; // I removed this ..............
                 scoreRun = 0;
                 break;
             
             case eScoreEvent.mine:
                 chain++;
-                scoreRun += chain;
+                score --;
+                GetComponent <TextMeshProUGUI>().text = score.ToString();
                 break;
         }
 

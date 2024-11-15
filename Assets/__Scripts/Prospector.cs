@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
-
+// this script manages the game and is attached to the camera
 public class Prospector : MonoBehaviour {
     static public Prospector    S;
 
@@ -37,15 +37,15 @@ public class Prospector : MonoBehaviour {
     }
 
     private void Start() {
-        Scoreboard.S.score = ScoreManager.SCORE;
+       // Scoreboard.S.score = ScoreManager.SCORE;
 
         deck = GetComponent<Deck>();
         deck.InitDeck(deckJSON.text);
-        Deck.Shuffle(ref deck.cards);
+        Deck.Shuffle(ref deck.cards); // don't change this part
 
-        layout = GetComponent<Layout>();
+        layout = GetComponent<Layout>(); // need a little chaning?
         layout.ReadLayout(layoutJSON.text);
-        drawPile = ConvertListCardsToListCardProspector(deck.cards);
+        drawPile = ConvertListCardsToListCardProspector(deck.cards); //
         LayoutGame();
     }
 
@@ -198,7 +198,7 @@ public class Prospector : MonoBehaviour {
                 SetTableauFaces();
 
                 ScoreManager.EVENT(eScoreEvent.mine);
-                FloatingScoreHandler(eScoreEvent.mine);
+                ///FloatingScoreHandler(eScoreEvent.mine); ////////////////commented out
                 break;
         }
 
